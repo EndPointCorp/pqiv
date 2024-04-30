@@ -6765,9 +6765,12 @@ gboolean window_configure_callback(GtkWidget *widget, GdkEventConfigure *event, 
 		}
 
 		// Rescale the image
+		/*
 		if(main_window_width != event->width - csd_width || main_window_height != event->height - csd_height) {
 			set_scale_level_to_fit();
 		}
+		*/
+		set_scale_level_to_fit();
 		gdk_window_invalidate_rect(gtk_widget_get_window(GTK_WIDGET(main_window)), NULL, TRUE);
 		queue_draw();
 
